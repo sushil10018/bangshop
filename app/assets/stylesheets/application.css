@@ -14,13 +14,42 @@
  *= require_self
  */
 
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Roboto', serif;
+  position: relative;
+  color: #333333;
+}
+
+.logo-container {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  z-index: 1;
+  background: #ffffff;
+  border-radius: 0 0 20px 20px;
+  padding: 10px 20px;
+  box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.5);
+}
+
+.logo-container p {
+  margin: 10px 0;
 }
 
 h1.logo {
   font-family: 'Pacifico', serif;
-  margin-bottom: 5px;
+  margin: 0;
+}
+
+#map {
+  min-height: 500px;
+  height: 100vh;
 }
 
 .info-window h3, .info-window p{

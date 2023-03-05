@@ -1,7 +1,9 @@
-<h1 class="logo">BangShop</h1>
-<p>Find the shop you need here</p>
+<div class="logo-container">
+  <h1 class="logo">BangShop</h1>
+  <p>Spa and massage | Nails | Hair removal | Barbershop</p>
+</div>
 
-<div id="map" style="height: 600px;"></div>
+<div id="map"></div>
 
 <script>
   const markers = <%= @markers.to_json.html_safe %>;
