@@ -1,4 +1,5 @@
 require 'faker'
+Faker::Config.locale = 'en-TH'
 
 categories = ['Spa and massage', 'Nails', 'Hair removal', 'Barbershop']
 
