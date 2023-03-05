@@ -1,24 +1,15 @@
-# README
+# BangShop
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The app intends to list the shops in Bangkok within the categories of Spa and massage, Nails, Hair removal, and Barbershop
 
-Things you may want to cover:
+Versions:
 
-* Ruby version
+* Ruby version: 2.6.9
 
-* System dependencies
+* Rails version: 6.1.7
 
-* Configuration
+Getting Started:
 
-* Database creation
+* `rake db:setup`
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* `GOOGLE_MAPS_API_KEY='<YOUR API KEY>' rails server`
