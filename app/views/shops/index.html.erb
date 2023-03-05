@@ -1,2 +1,17 @@
-<h1>Shops#index</h1>
-<p>Find me in app/views/shops/index.html.erb</p>
+<h1>BangShop</h1>
+<p>Find the shop you need here</p>
+
+<div id="map" style="height: 600px;"></div>
+
+<script>
+  function initMap() {
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 13,
+      center: { lat: 13.736717, lng: 100.523186 }
+    });
+  }
+</script>
+
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_MAPS_API_KEY"] %>&callback=initMap">
+</script>
