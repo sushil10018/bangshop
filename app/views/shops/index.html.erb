@@ -4,10 +4,20 @@
 <div id="map" style="height: 600px;"></div>
 
 <script>
+  const markers = <%= @markers.to_json.html_safe %>;
+
   function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 13,
       center: { lat: 13.736717, lng: 100.523186 }
+    });
+
+    markers.forEach((marker_data) => {
+      const marker = new google.maps.Marker({
+        position: marker_data,
+        map: map,
+        icon: marker_data.icon_path
+      });
     });
   }
 </script>
