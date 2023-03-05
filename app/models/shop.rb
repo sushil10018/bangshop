@@ -10,7 +10,8 @@ class Shop < ApplicationRecord
         lat: shop.latitude,
         lng: shop.longitude,
         shop_name: shop.name,
-        category_name: shop.category_name
+        category_name: shop.category_name,
+        icon_path: shop.icon_path
       }
     end
   end

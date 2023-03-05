@@ -18,10 +18,10 @@ RSpec.describe Shop, type: :model do
     hair_removal = Category.create(name: 'Hair removal')
     Shop.create(name: 'Hair Removal Shop', latitude: 13.2307, longitude: 100.1234, category: hair_removal)
 
-    expect(Shop.markers_hash).to eq [
-      {lat: 13.5007, lng: 100.3634, shop_name: 'Nail Shop', category_name: 'Nails'},
-      {lat: 13.7307, lng: 100.4534, shop_name: 'Saam Song Shop', category_name: 'Nails'},
-      {lat: 13.2307, lng: 100.1234, shop_name: 'Hair Removal Shop', category_name: 'Hair removal'}
+    expect(Shop.markers_hash).to match_array [
+      {lat: 13.5007, lng: 100.3634, shop_name: 'Nail Shop', category_name: 'Nails', icon_path: a_string_matching(%r{\A/assets/nails-[a-f0-9]{64}\.png\z})},
+      {lat: 13.7307, lng: 100.4534, shop_name: 'Saam Song Shop', category_name: 'Nails', icon_path: a_string_matching(%r{\A/assets/nails-[a-f0-9]{64}\.png\z})},
+      {lat: 13.2307, lng: 100.1234, shop_name: 'Hair Removal Shop', category_name: 'Hair removal', icon_path: a_string_matching(%r{\A/assets/hair-removal-[a-f0-9]{64}\.png\z})}
     ]
   end
 
