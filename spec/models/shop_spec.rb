@@ -24,4 +24,11 @@ RSpec.describe Shop, type: :model do
       {lat: 13.2307, lng: 100.1234, shop_name: 'Hair Removal Shop', category_name: 'Hair removal'}
     ]
   end
+
+  it "returns the correct path format for an icon" do
+    category = Category.create(name: "Hair Removal")
+    shop = Shop.create(name: "Clean Hair Salon", latitude: 13.736717, longitude: 100.523186, category: category)
+    icon_path = shop.icon_path
+    expect(icon_path).to match(%r{\A/assets/hair-removal-[a-f0-9]{64}\.png\z})
+  end
 end

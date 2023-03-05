@@ -13,4 +13,8 @@ class Shop < ApplicationRecord
       }
     end
   end
+
+  def icon_path
+    ActionController::Base.helpers.asset_path("#{category.name.downcase.parameterize}.png")
+  end
 end
